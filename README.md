@@ -229,8 +229,20 @@ Buka JupyterLab pada `http://localhost:8888/lab`. Konfigurasi Dockerfile menjala
 
 Isi bagian ini sebelum pengumpulan akhir.
 
-> Alat AI yang digunakan: [nama alat].
->
-> Bagian yang dibantu: [contoh: penjelasan error Polars atau review dokumentasi].
->
-> Verifikasi yang dilakukan: [contoh: menjalankan ulang kode, memeriksa dokumentasi resmi, dan memahami setiap cell].
+> Alat AI yang digunakan: Claude AI.
+> 
+> Bagian yang dibantu: 1. Membantu memperbaiki error pada kode Python dan Polars.
+2. Memberikan arahan dalam proses data profiling, data cleaning, dan Exploratory Data Analysis (EDA).
+3. Membantu pemeriksaan kualitas data, seperti missing values, duplikasi, dan outlier.
+4. Membantu pembuatan serta perbaikan visualisasi data menggunakan Matplotlib dan Plotly.
+5. Membantu menginterpretasikan hasil analisis dan menyusun insight berdasarkan output yang diperoleh.
+6. Membantu meninjau dokumentasi proyek dan memeriksa kelengkapan file sebelum pengumpulan.
+7. Memberikan panduan penggunaan Git dan GitHub untuk proses commit dan push repository..
+> 
+> Verifikasi yang dilakukan: 1. Menjalankan kode pada setiap notebook di JupyterLab untuk memastikan kode dapat dieksekusi dengan baik.
+2. Memeriksa output setiap proses data profiling, data cleaning, dan EDA.
+3. Memeriksa hasil pengecekan missing values, duplikasi, outlier, dan kualitas data.
+4. Memastikan hasil visualisasi Plotly berhasil ditampilkan.
+5. Memeriksa kembali kesesuaian insight dengan hasil analisis dataset.
+6. Memeriksa struktur folder, kelengkapan file, dan dokumentasi proyek sebelum pengumpulan.
+7. Memahami fungsi dan alur setiap cell kode yang digunakan dalam notebook.
