@@ -1,40 +1,88 @@
-# Data Tugas 1
+# Dokumentasi Dataset
 
-## Dataset yang Dipilih
+## 1. Identitas Dataset
 
-Isi informasi berikut sebelum Milestone 1.
-
-| Item | Isi |
+| Informasi | Keterangan |
 |---|---|
-| Nama dataset | `[isi nama dataset]` |
-| Sumber | `[URL BPS / Satu Data Indonesia / BMKG / HuggingFace / Kaggle]` |
-| Lisensi/ketentuan pakai | `[isi]` |
-| Ukuran | `[>= 500 MB atau > 1.000.000 baris]` |
-| Periode data | `[isi]` |
-| Unit analisis | `[isi]` |
+| Nama dataset | VQFat Indonesian Corpus |
+| Subset | cosmopedia_id |
+| Nama file | cosmopedia_id.csv |
+| Penulis | Vicky Fatrian |
+| Platform | Hugging Face |
+| Bahasa | Indonesia |
+| Format | CSV |
+| Versi dataset | 1.1 |
+| Tanggal versi | 6 Maret 2026 |
+| Lisensi | C-UDA (Computational Use of Data Agreement) |
 
-## Tempat Mencari Dataset
+## 2. Sumber Dataset
 
-Pilih dataset Indonesia yang legal digunakan, dapat didokumentasikan sumbernya, dan memenuhi batas ukuran tugas.
+Dataset diperoleh dari Hugging Face:
 
-| Situs | Kegunaan |
+https://huggingface.co/datasets/vickyfatrian/vqfat-indo-corpus
+
+Subset yang digunakan adalah `cosmopedia_id`, yaitu korpus teks sintetis berbahasa Indonesia yang diadaptasi dari konsep Cosmopedia.
+
+## 3. Informasi Dataset yang Digunakan
+
+Berdasarkan pemeriksaan file lokal:
+
+| Informasi | Hasil |
+|---|---:|
+| Nama file | cosmopedia_id.csv |
+| Ukuran file | 554,81 MB |
+| Jumlah baris | 120.068 |
+| Jumlah kolom | 9 |
+| Format | CSV |
+
+Ukuran file di atas merupakan hasil pengukuran file yang digunakan dalam penelitian ini, bukan ukuran keseluruhan repositori dataset.
+
+## 4. Struktur Data
+
+Dataset terdiri dari sembilan kolom:
+
+| Kolom | Keterangan |
 |---|---|
-| [Satu Data Indonesia](https://data.go.id/) | Portal data terbuka lintas instansi pemerintah Indonesia. |
-| [Badan Pusat Statistik](https://www.bps.go.id/) | Statistik sosial, ekonomi, kependudukan, dan data wilayah. |
-| [BMKG Data Online](https://dataonline.bmkg.go.id/) | Data cuaca, iklim, gempa bumi, dan observasi meteorologi. |
-| [Hugging Face Datasets](https://huggingface.co/datasets) | Dataset publik yang dapat dicari berdasarkan topik, bahasa, atau ukuran. |
-| [Kaggle Datasets](https://www.kaggle.com/datasets) | Katalog dataset publik; periksa lisensi dan dokumentasi pembuatnya. |
-| [Google Dataset Search](https://datasetsearch.research.google.com/) | Mesin pencari untuk menemukan dataset dari berbagai portal. |
+| id | Identitas unik data |
+| prompt | Teks instruksi atau konteks |
+| text | Isi teks atau respons |
+| token_length | Estimasi panjang teks berdasarkan token |
+| audience | Target pembaca |
+| format | Format atau jenis teks |
+| seed_data | Informasi sumber atau data dasar |
+| datasheet_global_id | Identitas global datasheet |
+| created_at | Informasi waktu pembuatan data |
 
-## Cara Memperoleh Data
+## 5. Unit Analisis
 
-1. Buka URL sumber di atas.
-2. Unduh file ke folder `data/raw/` tanpa mengubah data mentah.
-3. Catat nama file dan checksum bila tersedia.
-4. Ubah variabel `DATA_PATH` pada `notebooks/01_data_profiling.ipynb` agar menunjuk ke file tersebut.
+Unit analisis dalam tugas ini adalah satu entri teks pada dataset Cosmopedia Indonesia. Setiap baris merepresentasikan satu data yang memiliki informasi instruksi atau konteks, teks, serta metadata pendukung.
 
-## Aturan Penyimpanan
+## 6. Lisensi dan Atribusi
 
-- Jangan commit dataset mentah atau hasil olahan berukuran besar ke Git.
-- File pada `data/raw/` adalah data asli dan tidak boleh diubah.
-- Simpan hasil transformasi yang dapat direproduksi pada `data/processed/`.
+Dataset menggunakan lisensi C-UDA (Computational Use of Data Agreement).
+
+Penggunaan dataset harus mengikuti ketentuan lisensi dan atribusi yang tercantum pada halaman resmi Hugging Face.
+
+Atribusi:
+Vicky Fatrian. (2026). VQFat Indonesian Corpus: Combined Pre-training and Instruction QA Dataset for SLMs. Hugging Face.
+
+## 7. Cara Memperoleh Dataset
+
+Dataset dapat diperoleh melalui halaman Hugging Face berikut:
+
+https://huggingface.co/datasets/vickyfatrian/vqfat-indo-corpus
+
+Subset yang digunakan adalah `cosmopedia_id`.
+
+File CSV disimpan pada direktori:
+
+`data/raw/cosmopedia_id.csv`
+
+Untuk reproduksi, unduh subset yang sama dari sumber resmi dan simpan dengan nama file tersebut.
+
+## 8. Pengelolaan File
+
+- Dataset mentah disimpan pada `data/raw/`.
+- Dataset hasil pembersihan disimpan pada `data/processed/`.
+- File dataset mentah dan hasil olahan berukuran besar tidak diunggah ke GitHub.
+- Proses profiling, cleaning, dan EDA dilakukan melalui notebook pada direktori `notebooks/`.
